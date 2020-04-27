@@ -1,0 +1,64 @@
+@import "~src/styles.scss";
+
+.primary-navbar {
+  background-color: $primary;
+
+  .searchbar {
+    width: 50%;
+    position: relative;
+
+    .searchbar-input {
+      border: none;
+      border-radius: $border-f;
+      width: 100%;
+      padding: .8rem;
+    }
+
+    ::-webkit-input-placeholder {
+      /* WebKit browsers */
+      padding:0 1rem;
+    }
+
+    :-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      padding:0 1rem;
+      opacity: 1;
+    }
+
+    ::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      padding:0 1rem;
+      opacity: 1;
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      padding:0 1rem;
+    }
+
+    .material-icons {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
+  }
+
+  .material-icons {
+    // color: $bg-white  ;
+    // stroke: #000;
+  }
+
+}
+
+.secondary-navbar {
+  background-color: $secondary;
+  box-shadow: $shadow-lg;
+  z-index: 20;
+
+  .btn-categories{
+    width: 200px;
+    .material-icons{
+      margin-left: -30px;
+    }
+  }
+}

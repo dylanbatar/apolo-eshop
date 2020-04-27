@@ -1,0 +1,35 @@
+@import "~src/styles.scss";
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .card {
+    width: 170px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &:not(.category-title) {
+      filter: brightness(.5);
+      z-index: 0;
+    }
+
+
+    .category-title {
+      color: $primary;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      &::after {
+        content: " ";
+        z-index: 10;
+      }
+    }
+  }
+}

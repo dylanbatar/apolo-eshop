@@ -1,6 +1,69 @@
-.video-cover{
+@import "~src/styles.scss";
+
+section {
+  margin: 1rem 0rem;
+  padding: 1rem 0rem;
+
+  h2 {
+    margin-bottom: 1rem !important;
+  }
+
+  p {
+    margin: 1rem 0 !important;
+  }
+}
+
+.video-cover {
   height: 250px;
   width: 100%;
   object-fit: cover;
   margin: 1.5rem 0;
+}
+
+.services {
+  .card-deck {
+    .card {
+      border: none;
+      box-shadow: $shadow-lg;
+
+      .icon {
+        width: 100px;
+        height: 100px;
+        margin: .5rem auto;
+      }
+    }
+  }
+}
+
+.shadow {
+  box-shadow: $shadow-lg;
+}
+
+.white-bg {
+  background-color: $bg-white;
+}
+
+.secondary-bg {
+  background-color: $secondary;
+  border: none;
+  border-radius: $border;
+}
+
+.gray-bg {
+  background-color: $primary;
+}
+
+.btn-outline-secondary {
+  border: 1px solid $secondary;
+  color: $secondary;
+
+  &:hover {
+    background-color: $secondary;
+    color: #fff!important;
+  }
+}
+
+
+.rm{
+  margin-bottom: 0!important;
 }

@@ -1,0 +1,56 @@
+@import "~src/styles.scss";
+
+.card {
+  height: 390px;
+
+  img {
+    height: 240px;
+    padding: 1rem;
+  }
+
+  // border: none;
+  box-shadow: $shadow-lg;
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+    .btn {
+      border-radius: $border-f;
+      width: 80%;
+      position: relative;
+
+      &:hover {
+        p {
+          transform: translateY(30px);
+        }
+
+        .material-icons {
+          bottom: 5px;
+          transition: ease-in .2s;
+        }
+      }
+
+      b
+
+      .material-icons {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        left: 0;
+        bottom: -30px;
+      }
+    }
+  }
+
+
+}

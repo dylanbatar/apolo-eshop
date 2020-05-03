@@ -25,3 +25,12 @@ $border-f:9999px;
 .btn {
   text-transform: uppercase;
 }
+
+.btn-outline-primary{
+  background-color: $primary;
+  border: none;
+}
+
+.cursor{
+  cursor: pointer;
+}

@@ -16,24 +16,24 @@
 
     ::-webkit-input-placeholder {
       /* WebKit browsers */
-      padding:0 1rem;
+      padding: 0 1rem;
     }
 
     :-moz-placeholder {
       /* Mozilla Firefox 4 to 18 */
-      padding:0 1rem;
+      padding: 0 1rem;
       opacity: 1;
     }
 
     ::-moz-placeholder {
       /* Mozilla Firefox 19+ */
-      padding:0 1rem;
+      padding: 0 1rem;
       opacity: 1;
     }
 
     :-ms-input-placeholder {
       /* Internet Explorer 10+ */
-      padding:0 1rem;
+      padding: 0 1rem;
     }
 
     .material-icons {
@@ -47,7 +47,6 @@
     // color: $bg-white  ;
     // stroke: #000;
   }
-
 }
 
 .secondary-navbar {
@@ -55,10 +54,22 @@
   box-shadow: $shadow-lg;
   z-index: 20;
 
-  .btn-categories{
+  .btn-categories {
     width: 200px;
-    .material-icons{
+    .material-icons {
       margin-left: -10px;
     }
   }
+}
+
+.action-item:hover .singin {
+  display: block;
+}
+
+.singin {
+  z-index: 10;
+  left: -270px;
+  width: 300px;
+  top: 30px;
+  display: none;
 }

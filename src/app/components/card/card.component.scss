@@ -3,6 +3,7 @@
 .card {
   height: 390px;
 
+  // width: 270px;
   img {
     height: 240px;
     padding: 1rem;
@@ -16,6 +17,14 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+
+    .card-title {
+      width: 213px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
   }
 
   .actions {
@@ -29,6 +38,10 @@
       width: 80%;
       position: relative;
 
+      p {
+        font-size: 14px;
+      }
+
       &:hover {
         p {
           transform: translateY(30px);
@@ -39,8 +52,6 @@
           transition: ease-in .2s;
         }
       }
-
-      b
 
       .material-icons {
         position: absolute;

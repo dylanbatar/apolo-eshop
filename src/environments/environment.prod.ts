@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  hostEbost: "http://ebostpay.herokuapp.com",
+  hostImg: "https://file-s.download",
+  apikey: "SPMY@eBost",
 };

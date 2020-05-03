@@ -20,6 +20,20 @@ section {
   margin: 1.5rem 0;
 }
 
+.content-tab-pane{
+  width: 80%;
+  margin: 0 auto;
+  .img-content{
+    width: 400px;
+    img{
+      width: 100%;
+    }
+  }
+  .text-content{
+    width: 40%;
+  }
+}
+
 .services {
   .card-deck {
     .card {
@@ -53,17 +67,20 @@ section {
   background-color: $primary;
 }
 
-.btn-outline-secondary {
+.nav-pills .nav-link.active {
   border: 1px solid $secondary;
   color: $secondary;
+  background-color: unset!important;
 
   &:hover {
     background-color: $secondary;
-    color: #fff!important;
+    color: #fff !important;
   }
 }
 
 
-.rm{
-  margin-bottom: 0!important;
+
+
+.rm {
+  margin-bottom: 0 !important;
 }

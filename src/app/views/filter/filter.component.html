@@ -1,0 +1,51 @@
+<app-banner></app-banner>
+
+<div class="container my-4">
+  <div class="form-group m-auto " *ngIf="getFilterTitle != 'promociones'">
+    <label>Buscar por {{getFilterTitle}}</label>
+    <div class="actions d-flex">
+
+      <select class="custom-select mr-3" id="inlineFormCustomSelect" [(ngModel)]="selected"
+        (ngModelChange)="selectCategory()">
+        <option value="none" selected disabled>choose a mark</option>
+
+        <option *ngFor="let item of selectData">
+          {{item.categoria_es}}
+        </option>
+      </select>
+
+      <ng-container *ngIf="getFilterTitle === 'marcas'">
+        <select class="custom-select mr-3" value="none" id="inlineFormCustomSelect" [(ngModel)]="selectedMark"
+          (ngModelChange)="selectMark()">
+          <option value="none" selected disabled>Choose here</option>
+          <option *ngFor="let item of selectDataMarks">
+            {{item}}
+          </option>
+        </select>
+      </ng-container>
+
+      <div class="grid-options d-flex align-items-center">
+        <span class="material-icons">
+          view_module
+        </span>
+        <span class="material-icons">
+          view_stream
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="result my-4">
+    <div class="d-flex justify-content-between align-items-end">
+      <h1>{{selected == 'none'? '' : selected}}</h1>
+      <p>Resultados del filtro {{productArray.length}}</p>
+    </div>
+    <div class="results-cards row my-3">
+      <ng-container *ngFor="let item of productArray">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <app-card [item]="item"></app-card>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

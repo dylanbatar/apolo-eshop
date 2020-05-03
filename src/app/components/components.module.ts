@@ -5,6 +5,7 @@ import { HorizontalScrollComponent } from "./horizontal-scroll/horizontal-scroll
 import { CardComponent } from "./card/card.component";
 import { FeatureProductsComponent } from "./feature-products/feature-products.component";
 import { TabsComponent } from './tabs/tabs.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { TabsComponent } from './tabs/tabs.component';
     FeatureProductsComponent,
     TabsComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   exports: [
     BannerComponent,
     HorizontalScrollComponent,

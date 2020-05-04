@@ -1,0 +1,42 @@
+@import "~src/styles.scss";
+
+.container {
+  margin-top: 30px;
+}
+
+.product-desc {
+  .product-title {
+    margin-bottom: .8rem !important;
+  }
+
+  .product-price {
+    margin-bottom: .8rem !important;
+
+  }
+}
+
+.btn-action {
+  height: 100%;
+}
+
+.btn-add-car {
+  background-color: $primary;
+  border-radius: $border-f;
+}
+
+.input-range {
+  overflow: hidden;
+  border-radius: 30px;
+  width: 20%;
+  margin-right: 2rem;
+}
+
+.badge-item {
+  margin-top: .6rem!important;
+  margin-bottom: .6rem!important;
+}
+
+
+.actions {
+  display: flex;
+}

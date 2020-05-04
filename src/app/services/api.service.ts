@@ -66,6 +66,16 @@ export class ApiService {
       )
       .pipe(
         map((data) => {
+          return data["data"];
+        })
+      );
+  }
+
+  getCategories(): Observable<any> {
+    return this.http
+      .get(`${environment.hostEbost}/listarCategorias/${environment.apikey}`)
+      .pipe(
+        map((data) => {
           console.log(data);
           return data["data"];
         })

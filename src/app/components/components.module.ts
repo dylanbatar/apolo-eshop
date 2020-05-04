@@ -6,6 +6,7 @@ import { CardComponent } from "./card/card.component";
 import { FeatureProductsComponent } from "./feature-products/feature-products.component";
 import { TabsComponent } from './tabs/tabs.component';
 import { RouterModule } from '@angular/router';
+import { RecommendedComponent } from './recommended/recommended.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { RouterModule } from '@angular/router';
     CardComponent,
     FeatureProductsComponent,
     TabsComponent,
+    RecommendedComponent,
   ],
   imports: [CommonModule,RouterModule],
   exports: [
@@ -21,7 +23,8 @@ import { RouterModule } from '@angular/router';
     HorizontalScrollComponent,
     CardComponent,
     FeatureProductsComponent,
-    TabsComponent
+    TabsComponent,
+    RecommendedComponent
   ],
 })
 export class ComponentsModule {}

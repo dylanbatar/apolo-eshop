@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { ApiService } from "src/app/services/api.service";
+import { environment } from "src/environments/environment";
 
 @Component({
   selector: "app-detail",
@@ -8,19 +9,26 @@ import { ApiService } from "src/app/services/api.service";
   styleUrls: ["./detail.component.scss"],
 })
 export class DetailComponent implements OnInit {
+  product: any;
+  hostImg: string;
+  loading: boolean = false;
   constructor(
     private activedRouter: ActivatedRoute,
     private _ebost: ApiService
   ) {}
 
   ngOnInit(): void {
+    this.hostImg = environment.hostImg;
     this.getProductoId();
   }
 
   getProductoId() {
     this.activedRouter.params.subscribe((params) => {
-      console.log(params);
-      this._ebost.getProductoInfo(params.product).subscribe();
+      this._ebost.getProductoInfo(params.product).subscribe((response) => {
+        this.product = response[0];
+        console.log(this.product)
+        this.loading = true;
+      });
     });
   }
 }

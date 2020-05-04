@@ -30,6 +30,10 @@ $border-f:9999px;
   background-color: $primary;
   border: none;
 }
+.btn-outline-secondary{
+  background-color: $secondary;
+  border: none;
+}
 
 .cursor{
   cursor: pointer;

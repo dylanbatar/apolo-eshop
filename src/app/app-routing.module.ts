@@ -18,6 +18,11 @@ const routes: Routes = [
     loadChildren: () =>
       import("./views/detail/detail.module").then((m) => m.DetailModule),
   },
+  {
+    path: "contacto",
+    loadChildren: () =>
+      import("./views/contact/contact.module").then((m) => m.ContactModule),
+  },
 ];
 
 @NgModule({

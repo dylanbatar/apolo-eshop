@@ -1,1 +1,62 @@
-<p>detail works!</p>
+<ng-container *ngIf="loading">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 ">
+        <img [src]="
+            product.galeria.imagenes.length === 0
+              ? 'https://via.placeholder.com/800'
+              : hostImg + product.galeria.imagenes[0].imagen
+          " class="img-fluid" alt="Responsive image" />
+      </div>
+      <div class="col-6 product-desc">
+        <h2 class="product-title" aria-label="titulo-producto">{{ product.nombre }}</h2>
+        <div class="form-group">
+          <label class="control-label product-title">Precio: {{product.tarifas[0].valor}}</label>
+          <div class="actions">
+            <div class="input-group bootstrap-touchspin w-20 input-range">
+              <span class="">
+                <button class="btn-action btn-secondary btn-outline bootstrap-touchspin-down" type="button">
+                  -
+                </button>
+              </span>
+              <input id="tch3_22" type="text" value="30" name="tch3_22"
+                data-bts-button-down-class="btn btn-secondary btn-outline"
+                data-bts-button-up-class="btn btn-secondary btn-outline" class="form-control" style="display: block;" />
+              <span class="">
+                <button class="btn-action btn-secondary btn-outline bootstrap-touchspin-up" type="button">
+                  +
+                </button>
+              </span>
+            </div>
+            <div class="btn btn-add-car">añadir al carrito</div>
+          </div>
+        </div>
+        <div class="d-flex">
+          <span class="material-icons">
+            share
+          </span>
+          <p>Compartir este producto</p>
+        </div>
+        <hr>
+        <div class="badges">
+          <p>Categoria: {{product.categoria}}</p>
+          <p>Subcategoria: {{product.subcateg}}</p>
+          <ng-container *ngFor="let dataItem of product.data">
+            <p class="badge-item">{{dataItem.texto.es}}: {{dataItem.valor}}</p>
+          </ng-container>
+        </div>
+      </div>
+      <div class="col-12">
+        <hr>
+        <h3>Descripcion</h3>
+        <div class="decripcion">
+          <p>{{product.descripcion.es}}</p>
+        </div>
+      </div>
+      <div class="col-12">
+        <hr>
+        <app-recommended [item]="product.productos_sugeridos"></app-recommended>
+      </div>
+    </div>
+  </div>
+</ng-container>

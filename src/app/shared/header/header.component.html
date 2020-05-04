@@ -9,19 +9,19 @@
       </div>
       <div class="searchbar">
         <input type="text" class="searchbar-input" placeholder="Buscar productos">
-        <span class="material-icons" aria-label="search-icon">
+        <span class="material-icons cursor" aria-label="search-icon">
           search
         </span>
       </div>
       <div class="actions d-flex flex-nowrap justify-content-between">
-        <span class="material-icons" aria-label="favorite">
+        <span class="material-icons cursor" aria-label="favorite">
           favorite
         </span>
-        <span class="material-icons mx-4" aria-label="shopping-cart">
+        <span class="material-icons mx-4 cursor" aria-label="shopping-cart">
           shopping_cart
         </span>
         <div class="action-item position-relative">
-          <span class="material-icons login">
+          <span class="material-icons login cursor">
             person
           </span>
           <div class="card card-body position-absolute singin">
@@ -60,12 +60,9 @@
           Ver Categorias
         </button>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <ng-container *ngFor="let item of categories">
+            <a class="dropdown-item" href="#">{{item?.categoria_es}}</a>
+          </ng-container>
         </div>
       </div>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -85,7 +82,7 @@
             <a class="nav-link" href="contact.html">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contactanos </a>
+            <a class="nav-link cursor" routerLink="/contacto">Contactanos</a>
           </li>
         </ul>
       </div>

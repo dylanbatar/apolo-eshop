@@ -1,0 +1,12 @@
+<ng-container *ngIf="item">
+  <div>
+    <h3>Productos Relacionados</h3>
+    <div class="row">
+      <ng-container *ngFor="let product of item">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <app-card [item]="product"></app-card>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</ng-container>
